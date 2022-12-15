@@ -1,0 +1,73 @@
+body, html{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(coruscant.jpg);
+
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 2px;
+    transform-style: preserve-3d;
+}
+
+.secao{
+    margin: 50px;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    transform-style: inherit;
+}
+
+.secao::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: -10;/*profundidade*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+}
+
+.conteudo{
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    padding: 2px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(7, 7, 7);
+    text-align: justify;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 10px 10px 10px #000000;
+
+}
+
+.fundo1::before{
+    background-image: url(img/bad\ batch3.jpg);
+    
+}
+
+.fundo2::before{
+    background-image: url(img/commandos.jpg);
+}
+.fundo3::before{
+    background-image: url(img/arc\ trooper.jpg);
+}
+h2{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    text-shadow: 2px 2px #000000;
+}
+
+h1{
+    text-align: center;
+    border: solid 5px black;
+    background-color: rgb(255, 255, 255);
+    
+}
